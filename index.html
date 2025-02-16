@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Richard Valentino</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: #ffcc00;
+            color: black;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            background: black;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #ffcc00;
+            color: black;
+        }
+        section {
+            margin: 30px auto;
+            padding: 20px;
+            width: 80%;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+            transition: 0.3s;
+        }
+        button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+        .hidden {
+            display: none;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.7);
+        }
+        .slide {
+            display: none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .next {
+            right: 0;
+        }
+        blockquote {
+            font-style: italic;
+            background: #ffcc00;
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELLCOME BANG</h1>
+        <nav>
+            <a href="#about">Tentang</a>
+            <a href="#education">Pendidikan</a>
+            <a href="#hobbies">Hobi</a>
+            <a href="#gallery">Galeri</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Halo saya Richard Valentino Parulian Silalahi, panggil aja Richard atau Valen, Mine juga boleh hehe, kalo boleh jujur saya orang nya pendiam, tapi kalo sama teman dekat beda cerita saya sangat aktif aowkaowk.</p>
+    </section>
+
+    <section id="education">
+        <h2>Riwayat Pendidikan</h2>
+        <button onclick="toggleEducation()">Tampilkan Riwayat Pendidikan</button>
+        <ul id="education-list" class="hidden">
+            <li>SD Negeri 2 Bunta</li>
+            <li>SMP Negeri 1 Lore Utara</li>
+            <li>SMA Negeri 2 Petasia</li>
+            <li>Universitas Tadulako (Sekarang)</li>
+        </ul>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobi Saya</h2>
+        <p>Saya itu orangnya gampang penasaran, apalagi kalau sudah berhubungan dengan teknologi dan otomotif! Setiap ada gadget baru, rasanya pengen langsung ngulik fitur-fiturnya. Kayak smartphone, laptop, sampai teknologi canggih lainnya, semuanya selalu menarik buat dipelajari.
+            Selain itu, saya juga suka dunia otomotif, terutama mobil. Ngeliat desain keren, mesin bertenaga, atau teknologi baru di dunia otomotif selalu bikin semangat. Kadang cuma baca-baca info, nonton review, atau bahkan ngebayangin punya mobil impian sendiri wkwkwkw, pasti keren bgt kalo punya mobil impian yah.
+            Tapi nggak cuma itu, saya juga hobi desain dan editing foto sesekali video. Bagi saya, ini bukan sekadar iseng, tapi cara buat menyalurkan kreativitas. Entah itu bikin foto jadi lebih estetik atau ngedit video biar makin keren, semuanya seru dan bisa menambah softskill saya.
+            Pokoknya, saya selalu(?) suka belajar hal baru, apalagi kalau ada hubungannya dengan teknologi, otomotif, atau dunia kreatif. Jadi kalau nemu sesuatu yang menarik, pasti langsung penasaran aowkaowk :v</p>
+    </section>
+
+    <section id="quote">
+        <h2>Kutipan Hidup</h2>
+        <blockquote>
+            <p>"Hidup adalah perjalanan yang penuh rintangan, di mana jatuh dan bangkit adalah bagian dari proses. Masa lalu bukan untuk dilupakan, tetapi juga bukan tempat untuk terus menetap. Jangan terjebak dalam kenangan, karena masih banyak momen indah yang menanti di depan. Tatap masa depan dengan keyakinan, terus melangkah, dan jadikan setiap langkah sebagai awal yang lebih baik. Hidup harus terus berjalan, bagaimanapun keadaannya."</p>
+        </blockquote>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeri Foto</h2>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="imagesfoto1.jpg" alt="Foto 1" width="100%">
+            </div>
+            <div class="slide fade">
+                <img src="imagesfoto2.jpg" alt="Foto 2" width="100%">
+            </div>
+            <div class="slide fade">
+                <img src="imagesfoto3.jpg" alt="Foto 3" width="100%">
+            </div>
+            <div class="slide fade">
+                <img src="imagesfoto4.jpg" alt="Foto 4" width="100%">
+            </div>
+            <div class="slide fade">
+                <img src="imagesfoto5.jpg" alt="Foto 5" width="100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Richard Valentino Parulian Silalahi</p>
+    </footer>
+
+    <script>
+        function toggleEducation() {
+            var list = document.getElementById("education-list");
+            list.classList.toggle("hidden");
+        }
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1;}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+</body>
+</html>
